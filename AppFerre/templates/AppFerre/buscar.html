@@ -1,0 +1,15 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+<p class="fw-bolder"> Buscar Cursos</p>
+{% endblock titulo%}
+
+{%block contenido%}
+
+<form action ="{% url 'encontrar_producto' %}" method="GET">
+  {% csrf_token %} 
+  <p> Ingrese una Palabra: <input type = "text" name= "buscar" id= "buscar"> </p>
+  <input type= "submit" value= "Buscar">
+</form>
+
+{% endblock contenido%}

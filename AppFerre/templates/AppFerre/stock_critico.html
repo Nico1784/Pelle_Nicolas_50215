@@ -1,0 +1,35 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+<p class="fw-bolder">Reporte Stock Critico</p>
+{% endblock titulo%}
+
+{%block contenido%}
+
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th> ID Producto </th>
+            <th> Detalle_Producto </th>
+            <th> Stock Critico </th>
+            <th> Cantidad Disponible </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for p in producto %}
+        {% if p.cantdisponible < p.stock_critico %} 
+            <tr>
+                <td>{{p.idproducto}}</td>
+                <td>{{p.nombre}}</td>
+                <td>{{p.stock_critico}}</td>
+                <td>{{p.cantdisponible}}</td>
+              </tr>
+        {%endif%} 
+      {% endfor %}
+     </tbody>
+
+</table>
+            
+
+{% endblock contenido%}

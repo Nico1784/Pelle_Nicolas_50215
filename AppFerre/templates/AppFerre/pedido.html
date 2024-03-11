@@ -1,0 +1,52 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+<p class="fw-bolder">PEDIDOS</p>
+
+{% endblock titulo%}
+
+
+{%block contenido%}
+
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th> ID Pedido </th>
+            <th> ID Producto </th>
+            <th> Detalle_Producto </th>
+            <th> Precio </th>
+            <th> Cantidad</th>
+            <th> Monto </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for p in pedido %}
+        <tr>
+        
+            <td>{{p.numero_pedido}}</td>
+            <td>{{p.idproducto}}</td>
+            <td>{{p.detalle_producto}}</td>
+            <td>{{p.precio}}</td>
+            <td>{{p.cantidad}}</td>
+            <td>{{p.monto}}</td>
+                
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock contenido%}

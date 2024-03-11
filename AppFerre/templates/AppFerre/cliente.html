@@ -1,0 +1,37 @@
+{% extends "AppFerre/index.html"%}
+
+
+{%block titulo%}
+<p class="fw-bolder">CLIENTES</p>
+{% endblock titulo%}
+
+
+
+{%block contenido%}
+ 
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th> ID Cliente </th>
+            <th> Nombre Cliente </th>
+            <th> Apellido </th>
+            <th> Telefono </th>
+            <th> Mail</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for c in cliente %}
+        <tr>
+            <td>{{c.idcliente}}</td>
+            <td>{{c.nombre}}</td>
+            <td>{{c.apellido}}</td> 
+            <td>{{c.telefono}}</td> 
+            <td>{{c.mail}}</td>   
+                       
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+            
+{% endblock contenido%}

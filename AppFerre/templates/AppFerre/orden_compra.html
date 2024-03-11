@@ -1,0 +1,33 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+<p class="fw-bolder">ORDEN COMPRA</p>
+{% endblock titulo%}
+
+{%block contenido%}
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th> ID Orden Compra </th>
+            <th> ID Producto </th>
+            <th> Detalle_Producto </th>
+            <th> Cantidad </th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for o in orden_compra %}
+        <tr>
+            <td>{{o.id_orden}}</td>
+            <td>{{o.idproducto}}</td>
+            <td>{{o.detalle_producto}}</td>
+            <td>{{o.cantidad}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+
+    
+</table>
+            
+
+{% endblock contenido%}
