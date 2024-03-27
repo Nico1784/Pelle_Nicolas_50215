@@ -1,0 +1,65 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+
+CLIENTES </p></h5>
+
+{% endblock titulo%}
+
+
+
+{%block contenido%}
+ 
+<table style="background-color:white">
+    <tr>
+        <td width= "200"> <h2> Cliente </h2> </td>
+        <td>
+            <a   href="{% url 'create_cliente'%}"
+                 class="btn btn-primary btn-sm"
+             ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>
+    </tr>
+
+<table class= "table table-striped"  style="background-color:white">
+    <thead>
+        <tr>
+            <th> ID Cliente </th>
+            <th> Nombre Cliente </th>
+            <th> Apellido </th>
+            <th> Telefono </th>
+            <th> Mail</th>
+            <th> Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for c in cliente_list %}
+        <tr>
+            <td>{{c.idcliente}}</td>
+            <td>{{c.nombre}}</td>
+            <td>{{c.apellido}}</td> 
+            <td>{{c.telefono}}</td> 
+            <td>{{c.mail}}</td>
+               
+            <td> 
+                <a
+                    href="{%url 'update_cliente' c.id %}"
+                    class="btn btn-primary"
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                    ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                  <a
+                     href="{%url 'delete_cliente' c.id %}"
+                     class="btn btn-danger"
+                     style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                     ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                  </a>
+            </td>    
+        </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+            
+{% endblock contenido%}

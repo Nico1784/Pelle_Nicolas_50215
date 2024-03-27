@@ -1,0 +1,59 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+ORDEN COMPRA</p></h5> 
+{% endblock titulo%}
+
+{%block contenido%}
+
+<table style="background-color:white">
+    <tr>
+        <td width= "200"> <h4>ORDEN COMPRA</h4> </td>
+        <td>
+            <a   href="{% url 'create_orden_compra' %}"
+                 class="btn btn-primary btn-sm"
+             ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>
+    </tr>
+<table class= "table table-striped" style="background-color:white">
+    <thead>
+        <tr>
+            <th> ID Orden Compra </th>
+            <th> ID Producto </th>
+            <th> Detalle_Producto </th>
+            <th> Cantidad </th>
+            <th> Acciones </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for o in ordencompra_list %}
+        <tr>
+            <td>{{o.id_orden}}</td>
+            <td>{{o.idproducto}}</td>
+            <td>{{o.detalle_producto}}</td>
+            <td>{{o.cantidad}}</td>
+            <td> 
+                <a
+                    href="{%url 'update_orden_compra' o.id %}"
+                    class="btn btn-primary"
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                    ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                     href="{%url 'delete_orden_compra' o.id %}"
+                     class="btn btn-danger"
+                     style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                     ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>
+            </td>    
+        </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+            
+
+{% endblock contenido%}

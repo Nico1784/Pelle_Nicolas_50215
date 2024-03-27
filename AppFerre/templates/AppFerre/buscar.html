@@ -1,15 +1,18 @@
 {% extends "AppFerre/index.html"%}
 
 {%block titulo%}
-<p class="fw-bolder"> Buscar Cursos</p>
+BUSCAR PRODUCTOS </p></h5>
 {% endblock titulo%}
 
 {%block contenido%}
 
-<form action ="{% url 'encontrar_producto' %}" method="GET">
+<form action ="{% url 'encontrar_producto' %}" method="GET" style="color: white">
   {% csrf_token %} 
-  <p> Ingrese una Palabra: <input type = "text" name= "buscar" id= "buscar"> </p>
+  <p class="fw-bolder" style="color: white"> Ingrese una Palabra: <input type = "text" name= "buscar" id= "buscar" style="background-color:white"> </p>
   <input type= "submit" value= "Buscar">
 </form>
+<br> 
+<p class="fw-bolder" style="color: white"> Aclaración: Si no se completa ningún dato, el resultado de la busqueda será todo el listado productos </p> 
+<br> 
 
 {% endblock contenido%}

@@ -1,0 +1,74 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+PEDIDOS </p></h5> 
+{% endblock titulo%}
+
+{%block contenido%}
+
+<table style="background-color:white">
+    <tr>
+        <td width= "200"> <h4> PEDIDO </h4> </td>
+        <td>
+            <a   href="{% url 'create_pedido' %}"
+                 class="btn btn-primary btn-sm"
+             ><i class="fa fa-plus fa-lg" title="Crear"> </i>
+            </a>
+        </td>
+    </tr>
+
+<table class= "table table-striped" style="background-color:white">
+    <thead>
+        <tr>
+            <th> ID Pedido </th>
+            <th> ID Producto </th>
+            <th> Detalle_Producto </th>
+            <th> Precio </th>
+            <th> Cantidad</th>
+            <th> Monto </th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for p in pedido_list %}
+        <tr>
+        
+            <td>{{p.numero_pedido}}</td>
+            <td>{{p.idproducto}}</td>
+            <td>{{p.detalle_producto}}</td>
+            <td>{{p.precio}}</td>
+            <td>{{p.cantidad}}</td>
+            <td>{{p.monto}}</td>
+            <td> 
+                <a
+                    href="{%url 'update_pedido' p.id %}"
+                    class="btn btn-primary"
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                    ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                </a>
+                <a
+                     href="{%url 'delete_pedido' p.id %}"
+                     class="btn btn-danger"
+                     style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                    ><i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                </a>
+            </td>    
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock contenido%}

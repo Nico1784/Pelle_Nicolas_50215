@@ -1,0 +1,24 @@
+{% extends "AppFerre/index.html"%}
+
+
+{% block titulo %}
+CONFIRMACION ELIMINACION PRODUCTO </p></h5>
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+    
+<form action="" method="POST">
+    {% csrf_token %}   
+    <div class="text-center"style="background-color:black">     
+        <h4 style="color:red">¿ Esta seguro de eliminar producto ? <p style="color:red">{{ object }}</p> </h4>
+    </div>
+    <div class="text-center">
+        <input type="submit" class="btn btn-primary btn-block" value="Confirmar">
+        <a class="btn btn-success" href="{%url 'productos'%}">Volver</a>
+    </div>
+</form>
+<br>
+<br>
+{% endblock contenido %}

@@ -1,0 +1,21 @@
+{% extends "AppFerre/index.html"%}
+
+
+{% block titulo %}
+PEDIDO</p></h5> 
+{% endblock titulo %}
+
+
+{% block contenido %}
+    
+<form action="" method="post"style="color: white">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <br>
+    <input type="submit" value="Guardar">
+</form>
+<br>
+<br>
+{% endblock contenido %}

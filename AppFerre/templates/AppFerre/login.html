@@ -1,0 +1,30 @@
+{% extends "AppFerre/index.html"%}
+
+{%block titulo%}
+LOGIN  </p></h5> 
+
+<div class="text-center my-5">
+  <h4><p  class="fw-bolder" style="color: red" class="text-center"> {{texto}} </p> </h4> 
+</div>
+
+{% endblock titulo%}
+
+
+
+{%block contenido%}
+
+<form action ="" method="POST" style="color: white">
+ {% csrf_token %} 
+
+ <table>
+   {{form.as_table}}
+ </table>
+ <br>
+ <input type="submit" value="Entrar"style="background-color:white">
+
+</form>
+<br>
+<br>
+
+
+{% endblock contenido%}

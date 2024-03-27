@@ -1,0 +1,26 @@
+{% extends "AppFerre/index.html"%}
+
+
+
+
+{%block titulo%}
+
+RESULTADO BUSQUEDA </p></h5>
+
+{% endblock titulo%}
+
+
+
+{%block contenido%}
+
+
+<div class="text-center my-5"style="background-color:black">
+    <h5><p  class="fw-bolder" style="color: red" class="text-center"> {{texto}} </p> </h5> 
+</div>
+
+<div class="text-center my-5">
+    <a  class="btn btn-primary" href="{%url 'buscar_producto'%}"> Intentar Nuevamente</a>
+</div
+
+{% endblock contenido%}
+

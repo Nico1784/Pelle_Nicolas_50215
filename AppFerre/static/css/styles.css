@@ -10,9 +10,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
-
-
+ 
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -82,12 +80,12 @@
   --bs-highlight-bg: #fff3cd;
 }
 
-.nico{
-  background-image: url("static/css/portada_ferreteria.jpg");
+.nico {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 
 *,
@@ -95,9 +93,6 @@
 *::after {
   box-sizing: border-box;
 }
-
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -635,7 +630,6 @@ progress {
 }
 
 .figure-caption {
-  
   font-size: 0.875em;
   color: #6c757d;
 }
@@ -654,9 +648,6 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
-  
-
-
 }
 
 @media (min-width: 576px) {
