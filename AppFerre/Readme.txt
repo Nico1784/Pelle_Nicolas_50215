@@ -4,7 +4,8 @@ Usuario Prueba
 Nombre:     Fernando
 Contarseña: coder_456
 
-1) Descripción Proyecto: Aplicación Ferretería Pelle
+1) DESCRIPCION PROYECTO: Aplicación Ferretería Pelle
+
 -Definición Proyecto: La finalidad del proyecto, es desarrollar un “Aplicación” que
 facilite la gestión de un comercio minorista, dedicado a la comercialización de
 productos de ferretería.
@@ -13,9 +14,11 @@ i) El proceso de solicitud de mercadería por parte de un cliente.
 ii) En facilitar la consulta de un producto. En especial sus atributos, por
 ejemplo: precio, cantidad disponible, etc.
 iii) La emisión de un reporte denominado “stock crítico”; el cual nos permite
-saber de manera actualizada, cuales productos son los que se debería solicitar                                        su reposición.                                
+saber de manera actualizada, cuales productos son los que se debería solicitar su reposición.  
+                             
 Estructura:
 Desde la página inicio se pueden acceder a las categorías y acciones.
+
 Acciones: Se accede únicamente desde el primer “widget” que se encuentra a la
 derecha de la página principal. Acciones disponibles:
 i) Generar un Pedido
@@ -37,12 +40,14 @@ iv) Ordenes Compra
 
 
 2) DESCRIPCIÓN DE LOS MODELOS  
+
 Cada categoría   representa un modelo del proyecto, se realiza una breve descripción de cada modelo:
 I) Productos: Representa todos los productos del negocio. Sus atributos son;
     A)	 Id Producto: Identificación única del producto que comercializa el negocio.
     B)	Nombre: Descripción del producto en cuestión
     C)	Cantidad Disponible: Cantidad disponible para la venta del producto en cuestión
     D)	Stock Critico: Nivel Stock del producto que una vez alcanzado, se deberá gestionar su compra. 
+
  II) Clientes: Representa los clientes del negocio. Atributos 
     A)	Id Cliente: Identificación única representado por el CUIT de la persona
     B)	Nombre: Nombre de la Persona
